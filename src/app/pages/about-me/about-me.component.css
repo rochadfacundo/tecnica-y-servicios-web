@@ -60,3 +60,51 @@ p {
   font-family: "libre-baskerville-regular";
   font-size: 15px;
 }
+/* Estilos generales para la sección Conociendo al equipo */
+.conociendo-equipo {
+  padding: 3rem 2rem;
+  background-color: var(--color-light2-green); /* Puedes ajustar el color de fondo si lo deseas */
+}
+
+.conociendo-equipo h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.row-cols-1, .row-cols-md-3 {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.card-body {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+}
+
+.card-text.text-muted {
+  color: #6c757d;
+}
+
+/* Estilo adicional para las imágenes en las cards, si decides agregar imágenes en el futuro */
+.card img {
+  max-height: 200px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}

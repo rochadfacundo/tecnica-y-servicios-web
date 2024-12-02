@@ -1,0 +1,79 @@
+.home-container {
+  height: 100vh; /* 100% de la altura de la ventana */
+  display: flex; /* Usamos flex para que las secciones estén alineadas horizontalmente */
+  margin: 0;
+  padding: 0;
+  font-family: "libre-baskerville-regular";
+}
+
+.left-section {
+  flex: 1; /* La sección izquierda ocupa el 50% del ancho */
+  height: 100%; /* La sección izquierda ocupa toda la altura */
+
+}
+
+.left-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen ocupe todo el espacio disponible sin distorsionarse */
+  background-position: center; /* La imagen se centra */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.right-section {
+  flex: 1; /* La sección derecha ocupa el 50% del ancho */
+  height: 100%; /* La sección derecha ocupa toda la altura */
+  background: var(--bg-color-light-green);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+}
+
+.right-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 4px solid #fff;
+  padding-bottom: 10px;
+  margin-top: -20px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /* Sombra sutil para destacar el texto */
+}
+
+.right-section p {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4); /* Sombra suave en el párrafo */
+}
+
+.right-section h2, .right-section h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 20px;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Sombra ligera para subtítulos */
+}
+
+
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column; /* En pantallas pequeñas las secciones se apilan verticalmente */
+    height: auto;
+  }
+
+  .left-section, .right-section {
+    width: 100%; /* Las secciones ocupan el 100% del ancho en dispositivos pequeños */
+  }
+
+  .left-section img {
+    height: auto; /* Ajustamos la altura de la imagen en pantallas pequeñas */
+  }
+}

@@ -1,0 +1,51 @@
+.footer {
+ background: var(--menu-bg-color);
+        border-top: 3px solid #2a5d3c; /* Borde superior verde oscuro */
+      }
+
+      .footer i {
+        color: #73a773; /* Color verde claro para el icono */
+      }
+
+      .footer span {
+        color: #fff; /* Texto blanco */
+      }
+
+      .footer .h6 {
+        font-weight: 500; /* Fuente seminegrita */
+      }
+
+      .footer .small {
+        font-size: 0.9rem; /* Tamaño de texto pequeño para los créditos */
+      }
+
+      .footer .container {
+        max-width: 1140px; /* Ancho máximo para el contenedor */
+      }
+
+      .footer .row {
+        align-items: center;
+      }
+
+      .footer .footer-logo {
+        max-width: 150px; /* Ajusta el tamaño del logo */
+        height: auto; /* Mantiene la proporción de la imagen */
+      }
+
+      .footer .col-12 {
+        text-align: center;
+      }
+
+      .footer .py-4 {
+        padding-top: 2rem;
+        padding-bottom: 2rem; /* Aumenta la altura del footer */
+      }
+
+      .footer .border-top {
+        border-top: 3px solid #2a5d3c; /* Borde más oscuro en la parte superior */
+      }
+
+      /* Asegura que el texto de créditos esté alineado a la derecha en pantallas grandes */
+      .footer .d-flex.justify-content-end {
+        justify-content: flex-end !important;
+      }

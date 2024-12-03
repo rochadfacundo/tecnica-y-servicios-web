@@ -1,0 +1,147 @@
+/* Fondo y espaciado de las secciones */
+.services-container {
+  background-color: var(--bg-color-light-green);
+  padding: 2rem 0;
+}
+
+.section {
+  margin-bottom: 3rem; /* Espacio entre las secciones */
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+/* Títulos */
+.text-center {
+  text-align: center;
+}
+
+h2, h3 {
+  font-size: 2rem;
+  color: var(--menu-bg-color);
+  margin-bottom: 1rem;
+}
+
+/* Párrafo introductorio */
+.services-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Cards de servicios */
+.services-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: var(--menu-bg-color);
+  color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  flex: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  object-fit: cover;
+}
+
+.card-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-content p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Lista de servicios */
+.services-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 2rem;
+  color: #333;
+  font-size: 1rem;
+}
+
+.services-list li {
+  margin: 0.5rem 0;
+}
+
+/* Logos de compañías */
+.companies-logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-items: center;
+}
+
+.companies-logos img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 8px; /* Redondeo leve */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+  /* Tabla de servicios */
+.services-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.services-table thead {
+  background-color: var(--menu-bg-color);
+  color: white;
+}
+
+.services-table th,
+.services-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.services-table th {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.services-table td {
+  font-size: 1rem;
+}
+
+/* Icono de "Ok" */
+.icon-ok {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: var(--menu-bg-color);
+  border-radius: 50%;
+  position: relative;
+}
+
+.icon-ok::after {
+  content: '✔';
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

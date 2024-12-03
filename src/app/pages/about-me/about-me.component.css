@@ -61,9 +61,10 @@ p {
   font-size: 15px;
 }
 /* Estilos generales para la sección Conociendo al equipo */
+/* Contenedor principal */
 .conociendo-equipo {
   padding: 3rem 2rem;
-  background-color: var(--color-light2-green); /* Puedes ajustar el color de fondo si lo deseas */
+  background-color: var(--color-light2-green);
 }
 
 .conociendo-equipo h2 {
@@ -72,18 +73,35 @@ p {
   margin-bottom: 2rem;
 }
 
-.row-cols-1, .row-cols-md-3 {
+/* Estilo para las filas */
+.row {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 1.5rem;
+  justify-content: space-between;
 }
 
+/* Estilo para las columnas */
+.col-md-4 {
+  flex: 1 1 calc(33.333% - 1.5rem); /* 3 por fila con espacio entre ellas */
+  box-sizing: border-box;
+}
+
+/* Estilo de las cards */
 .card {
   background-color: white;
-  border: 1px solid #ddd;
+  border: 2px solid var(--menu-bg-color); /* Usando la variable de borde */
   border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: sombra para más estilo */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animación al pasar el mouse */
 }
 
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo del contenido */
 .card-body {
   text-align: center;
   padding: 1.5rem;
@@ -100,11 +118,4 @@ p {
 
 .card-text.text-muted {
   color: #6c757d;
-}
-
-/* Estilo adicional para las imágenes en las cards, si decides agregar imágenes en el futuro */
-.card img {
-  max-height: 200px;
-  object-fit: cover;
-  margin-bottom: 1rem;
 }

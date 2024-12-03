@@ -1,28 +1,22 @@
-import { HttpClient,  } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Team } from '../../interfaces/team';
-
+import teamData from '../../../assets/team.json'; // Asegúrate de ajustar la ruta según tu estructura de carpetas
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-about-me',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './about-me.component.html',
-  styleUrl: './about-me.component.css'
+  styleUrls: ['./about-me.component.css']
 })
 export class AboutMeComponent implements OnInit {
-  team: Team[] = [];
+  public team: Team[] = [];
 
-  constructor(){
-
-  }
+  constructor() {}
 
   ngOnInit(): void {
-    //this.team = teamData as Team[];
-    console.log(this.team);
+    this.team = teamData as Team[]; // Carga los datos del archivo JSON
+    console.log(this.team); // Verifica los datos en la consola
   }
-
-
-
-
 }

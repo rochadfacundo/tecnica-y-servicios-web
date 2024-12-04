@@ -56,6 +56,10 @@
   color: #333;
 }
 
+.icon{
+  color: #c079ba;
+}
+
 /* Formulario de contacto */
 .contact-form {
   padding: 2rem;

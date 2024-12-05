@@ -60,6 +60,10 @@
     height: auto; /* Ajusta la altura en dispositivos pequeños */
   }
 
+  .right-section{
+    height: 50vh; /
+  }
+
   .left-section img {
     height: auto; /* Ajusta la altura de la imagen en pantallas pequeñas */
   }

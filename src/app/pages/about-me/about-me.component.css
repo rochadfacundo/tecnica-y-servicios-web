@@ -1,6 +1,6 @@
 .acerca-de-container {
   display: flex;
-  flex-direction: row;  /* Asegura que las secciones estén en fila */
+  flex-direction: row;  /* Las secciones están en fila en pantallas grandes */
   height: 100vh;  /* La altura ocupa toda la pantalla */
   width: 100%;  /* Asegura que el ancho sea completo */
   gap: 0;  /* Sin espacio entre las dos secciones */
@@ -10,7 +10,7 @@
 
 .acerca-de-left,
 .acerca-de-right {
-  flex: 1;  /* Ambos ocupan el 50% del ancho */
+  flex: 1;  /* Ambos ocupan el 50% del ancho en pantallas grandes */
   height: 100%;  /* Asegura que ocupen toda la altura */
 }
 
@@ -51,6 +51,38 @@
   height: 100%;  /* La imagen ocupa toda la altura disponible */
   object-fit: cover;  /* Asegura que la imagen se adapte correctamente */
 }
+
+h2, h3 {
+  font-family: "libre-baskerville-bold";
+}
+
+p {
+  font-family: "libre-baskerville-regular";
+  font-size: 15px;
+}
+
+/* Estilos específicos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .acerca-de-container {
+    flex-direction: column; /* Las secciones se apilan en pantallas pequeñas */
+    height: auto; /* Ajustamos la altura para pantallas pequeñas */
+  }
+
+  .acerca-de-left,
+  .acerca-de-right {
+    width: 100%; /* Ambas secciones ocupan el 100% del ancho */
+    height: auto; /* Ajustamos la altura para pantallas pequeñas */
+  }
+
+  .acerca-de-left {
+    padding: 1rem;  /* Reducimos el padding en pantallas pequeñas */
+  }
+
+  .acerca-de-right img {
+    height: auto;  /* La imagen ajusta su altura */
+  }
+}
+
 
 h2, h3 {
   font-family: "libre-baskerville-bold";

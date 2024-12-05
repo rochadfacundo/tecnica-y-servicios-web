@@ -1,51 +1,69 @@
 .footer {
- background: var(--menu-bg-color);
-        border-top: 3px solid #2a5d3c; /* Borde superior verde oscuro */
-      }
+  background: var(--menu-bg-color);
+  border-top: 3px solid #2a5d3c;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 
-      .footer i {
-        color: #73a773; /* Color verde claro para el icono */
-      }
+.footer i {
+  color: #73a773;
+}
 
-      .footer span {
-        color: #fff; /* Texto blanco */
-      }
+.footer span {
+  color: #fff;
+}
 
-      .footer .h6 {
-        font-weight: 500; /* Fuente seminegrita */
-      }
+.footer .h6 {
+  font-weight: 500;
+}
 
-      .footer .small {
-        font-size: 0.9rem; /* Tamaño de texto pequeño para los créditos */
-      }
+.footer .small {
+  font-size: 0.9rem;
+}
 
-      .footer .container {
-        max-width: 1140px; /* Ancho máximo para el contenedor */
-      }
+.footer .container {
+  max-width: 1140px;
+}
 
-      .footer .row {
-        align-items: center;
-      }
+.footer .row {
+  align-items: center;
+}
 
-      .footer .footer-logo {
-        max-width: 150px; /* Ajusta el tamaño del logo */
-        height: auto; /* Mantiene la proporción de la imagen */
-      }
+.footer .footer-logo {
+  max-width: 150px;
+  height: auto;
+}
 
-      .footer .col-12 {
-        text-align: center;
-      }
+.footer .col-12 {
+  text-align: center;
+}
 
-      .footer .py-4 {
-        padding-top: 2rem;
-        padding-bottom: 2rem; /* Aumenta la altura del footer */
-      }
+.footer .py-4 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
 
-      .footer .border-top {
-        border-top: 3px solid #2a5d3c; /* Borde más oscuro en la parte superior */
-      }
+.footer .border-top {
+  border-top: 3px solid #2a5d3c;
+}
 
-      /* Asegura que el texto de créditos esté alineado a la derecha en pantallas grandes */
-      .footer .d-flex.justify-content-end {
-        justify-content: flex-end !important;
-      }
+.footer .d-flex.justify-content-end {
+  justify-content: flex-end !important;
+}
+
+/* En dispositivos pequeños, ajustar el tamaño y la alineación del contenido */
+@media (max-width: 768px) {
+  .footer .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .footer .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer .d-flex.justify-content-end {
+    justify-content: center !important;
+  }
+}

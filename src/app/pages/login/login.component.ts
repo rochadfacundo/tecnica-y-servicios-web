@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { LoginServiceService } from '../../services/login-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +14,9 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 export class LoginComponent {
   public loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder,
+              private s_login:LoginServiceService,
+              private router:Router) {
     this.loginForm = this.fb.group({
       username: ['', Validators.required],
       password: ['', Validators.required]
@@ -24,6 +28,26 @@ export class LoginComponent {
       const { username, password } = this.loginForm.value;
       console.log('Usuario:', username, 'Contraseña:', password);
 
+      this.s_login
+        .onSubmit(username, password)
+        .then((response) => {
+          console.log('Respuesta del servidor:', response);
+
+          if (response && response.message === 'Login exitoso') {
+            console.log('Login correcto');
+
+            setTimeout(() => {
+              this.router.navigateByUrl('dashboard');
+            }, 2000);
+
+          } else {
+            console.log('Credenciales incorrectas');
+          }
+        })
+        .catch((error) => {
+          console.error('Hubo un error en la solicitud');
+        });
     }
   }
+
 }

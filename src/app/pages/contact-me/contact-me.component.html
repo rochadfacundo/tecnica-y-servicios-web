@@ -20,7 +20,19 @@
     <!-- Parte derecha -->
     <div class="contact-right">
       <!-- Placeholder del mapa -->
-      <div class="google-map-placeholder bg-secondary"></div>
+
+<!-- google-maps-demo.component.html -->
+          <google-map
+            mapId="6759407fa377403a"
+            height="300px"
+            width="500px"
+            [center]="center"
+            [zoom]="zoom"
+             >
+             <map-advanced-marker [position]="center"  />
+            </google-map>
+
+
     </div>
   </div>
 

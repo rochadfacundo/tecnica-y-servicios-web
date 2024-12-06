@@ -12,7 +12,7 @@ import {GoogleMap, MapAdvancedMarker} from '@angular/google-maps';
 export class ContactMeComponent {
 
   center: google.maps.LatLngLiteral = {lat: -34.620783, lng: -58.3797809};
-  zoom = 14;
+  zoom = 18;
 
 
 

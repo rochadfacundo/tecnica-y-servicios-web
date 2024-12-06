@@ -2,7 +2,7 @@
   <!-- Sección de contacto con cuadro central -->
   <div class="contact-box d-flex flex-wrap align-items-center justify-content-between">
     <!-- Parte izquierda -->
-    <div class="contact-left text-white">
+    <div class="contact-left  text-white text-center">
       <h3>¡Contáctanos!</h3>
       <p><strong>Ubicación:</strong> Humberto Primo 985 Piso 13 of. 1 y 2</p>
       <p><strong>Horarios:</strong> Lunes a Viernes 09 a 17 hs.</p>
@@ -17,23 +17,21 @@
       </p>
     </div>
 
-    <!-- Parte derecha -->
-    <div class="contact-right">
-      <!-- Placeholder del mapa -->
+<!-- Parte derecha -->
+<div class="contact-right">
+  <!-- Placeholder del mapa -->
+   <div class="map">
+  <google-map
+    mapId="6759407fa377403a"
+    [center]="center"
+    [zoom]="zoom"
+    class="map-container">
+    <map-advanced-marker [position]="center"></map-advanced-marker>
+  </google-map>
+</div>
+</div>
 
-<!-- google-maps-demo.component.html -->
-          <google-map
-            mapId="6759407fa377403a"
-            height="300px"
-            width="500px"
-            [center]="center"
-            [zoom]="zoom"
-             >
-             <map-advanced-marker [position]="center"  />
-            </google-map>
 
-
-    </div>
   </div>
 
   <!-- Sección de formulario -->

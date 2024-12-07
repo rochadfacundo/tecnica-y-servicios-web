@@ -7,6 +7,10 @@
   background-color: var(--bg-color-light-green);
   overflow: hidden; /* Evitar desbordamientos */
 }
+p{
+  margin: 2rem;
+}
+
 
 /* Cuadro central */
 .contact-box {

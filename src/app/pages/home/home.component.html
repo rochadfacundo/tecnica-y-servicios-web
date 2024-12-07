@@ -1,20 +1,28 @@
 <div class="container-fluid home-container">
-
-
   <div class="row no-gutters">
-    <!-- Sección de texto (mitad derecha) -->
-    <div class="col-lg-6 col-md-12 col-sm-12 right-section">
+    <!-- Sección de texto -->
+    <div class="right-section">
       <h1 class="align-text-top">Técnica y Servicios</h1>
       <p>Organizador Asesor de Productores de Seguros</p>
       <h3>Acompañarte es nuestro propósito</h3>
     </div>
-  </div>
-
-  <div class="row no-gutters">
-    <!-- Sección de imagen (mitad izquierda) -->
-    <div class="col-lg-6 col-md-12 col-sm-12 left-section">
+    <!-- Sección de imagen -->
+    <div class="left-section">
       <img src="../../../assets/desktop.png" alt="Escritorio" class="img-fluid">
     </div>
   </div>
-
+</div>
+<!-- Nueva sección: Compañías -->
+<div class="container-fluid companias-section">
+  <h2 class="text-center text-white">Trabajamos con las mejores compañías</h2>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let compania of companias">
+      <div class="card">
+        <img [src]="compania.logo" alt="{{ compania.nombre }}" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title text-center">{{ compania.nombre }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

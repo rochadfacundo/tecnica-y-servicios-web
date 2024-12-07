@@ -6,6 +6,8 @@
   --color-light2-green:#74b45c;
 }
 
+
+
 /*Font google*/
 .libre-baskerville-regular {
   font-family: "Libre Baskerville", serif;
@@ -43,4 +45,20 @@
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4); /* Aumenta la sombra */
 }
 
+
+.icon{
+  color:whitesmoke;
+}
+
+.icon:hover{
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4); /* Aumenta la sombra */
+  color: var(--bg-color-light-green);
+  cursor: pointer;
+}
+
+.icon .no-focus:focus {
+  outline: none; /* Eliminar el borde de enfoque */
+  box-shadow: none; /* Eliminar cualquier sombra extra */
+}
 

@@ -19,7 +19,7 @@ exports.handler = async function(event, context) {
   const { username, password } = JSON.parse(event.body);
 
   // Simula la validación de las credenciales
-  if (username === 'user' && password === 'password') {
+  if (username === 'admin' && password === 'admin') {
     return {
       statusCode: 200,
       headers: headers, // Agregamos las cabeceras CORS en la respuesta exitosa

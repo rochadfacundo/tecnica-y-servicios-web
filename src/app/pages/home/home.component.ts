@@ -14,10 +14,10 @@ export class HomeComponent {
 
 
   companias = [
-    { nombre: 'Río Uruguay', logo: '../../../assets/rio-uruguay.png' },
-    { nombre: 'Federación Patronal', logo: '../../../assets/federacion-patronal.png' },
+    { nombre: 'Río Uruguay', logo: '../../../assets/rus.png' },
+    { nombre: 'Mercantil Andina', logo: '../../../assets/mercantil.png' },
     { nombre: 'ATM', logo: '../../../assets/atm.png' },
     { nombre: 'Rivadavia', logo: '../../../assets/rivadavia.png' },
-    { nombre: 'Mercantil Andina', logo: '../../../assets/mercantil-andina.png' }
+    { nombre: 'Federación Patronal', logo: '../../../assets/federacion.png' },
   ];
 }

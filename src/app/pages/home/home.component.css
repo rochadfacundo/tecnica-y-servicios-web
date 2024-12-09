@@ -76,10 +76,23 @@ html, body {
 }
 
 
-.right-section h1, .right-section p, .right-section h3 {
+.right-section h1{
   text-align: center;
   color: #fff;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  text-shadow: 6px 5px 5px rgba(0, 0, 0, 0.9);
+
+}
+
+.right-section p {
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 5px 6px rgba(0, 0, 0, 0.8);
+}
+
+.right-section h3 {
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 5px 6px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -122,6 +135,9 @@ html, body {
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
+  height: auto; /* Ajusta este valor según la altura deseada */
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
@@ -130,9 +146,10 @@ html, body {
 }
 
 .card-img-top {
-  height: 150px;
-  object-fit: contain;
-  padding: 1rem;
+  width: 100%; /* Asegura que la imagen cubra el ancho completo */
+  height: 100%; /* Asegura que cubra el alto completo */
+  object-fit: cover; /* Ajusta la imagen para cubrir el espacio del card */
+  padding: 0; /* Elimina el padding si no es necesario */
 }
 
 .card-title {

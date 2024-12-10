@@ -1,53 +1,50 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { LoginServiceService } from '../../services/login-service.service';
 import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule,CommonModule],
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrls: ['./login.component.css'], // Cambié "styleUrl" a "styleUrls"
 })
 export class LoginComponent {
   public loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder,
-              private s_login:LoginServiceService,
-              private router:Router) {
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private s_auth: AuthService
+  ) {
     this.loginForm = this.fb.group({
       username: ['', Validators.required],
-      password: ['', Validators.required]
+      password: ['', Validators.required],
     });
   }
 
-  onSubmit() {
-    if (this.loginForm.valid) {
-      const { username, password } = this.loginForm.value;
-      console.log('Usuario:', username, 'Contraseña:', password);
+  async onLogin() {
+    if (this.loginForm.invalid) {
+      console.error('Formulario inválido');
+      return;
+    }
 
-      this.s_login
-        .onSubmit(username, password)
-        .then((response) => {
-          console.log('Respuesta del servidor:', response);
+    const { username, password } = this.loginForm.value;
 
-          if (response && response.message === 'Login exitoso') {
-            console.log('Login correcto');
+    try {
+      // Convertimos el username en un correo electrónico ficticio
+      const email = `${username}@tecnicayservicios.com`;
 
-            setTimeout(() => {
-              this.router.navigateByUrl('dashboard');
-            }, 2000);
+      // Llamamos al servicio de autenticación
+      const user = await this.s_auth.login(email, password);
+      console.log('Usuario logueado:', user);
 
-          } else {
-            console.log('Credenciales incorrectas');
-          }
-        })
-        .catch((error) => {
-          console.error('Hubo un error en la solicitud');
-        });
+      // Redirigir al dashboard
+      this.router.navigateByUrl('dashboard');
+    } catch (error) {
+      console.error('Error al iniciar sesión:', error);
     }
   }
-
 }
